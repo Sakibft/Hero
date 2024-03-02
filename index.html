@@ -1,59 +1,61 @@
 <!DOCTYPE html>
 <html data-theme="light" lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>devHero</title>
   <!-- tailwind and daisyUi -->
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
-<script src="https://cdn.tailwindcss.com"></script>
-<!-- add css -->
-<link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- add css -->
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <!-- 1 -->
-<section class="container mx-auto mt-8">
+  <section class="container mx-auto mt-8">
     <!-- navbar -->
     <div>
       <nav class="flex justify-between">
-       <div>
-        <img src="./images/logo.png" alt="">
-        <!-- <h1 class="text-2xl font-extrabold ">ReTro</h1> -->
-       </div>
-       <div class="flex gap-3">
-        <div class="tooltip" data-tip="home">
-          <button class="btn btn-circle cursor-pointer border border-gray-300">
-            <img src="./images/Vector.svg" alt="">
-          </button>
+        <div>
+          <img src="./images/logo.png" alt="">
+          <!-- <h1 class="text-2xl font-extrabold ">ReTro</h1> -->
         </div>
-        <div class="tooltip" data-tip="edit">
-          <button class="btn btn-circle cursor-pointer border border-gray-300">
-            <img src="./images/Frame(0).svg" alt="">
-          </button>
+        <div class="flex gap-3">
+          <div class="tooltip" data-tip="home">
+            <button class="btn btn-circle cursor-pointer border border-gray-300">
+              <img src="./images/Vector.svg" alt="">
+            </button>
+          </div>
+          <div class="tooltip" data-tip="edit">
+            <button class="btn btn-circle cursor-pointer border border-gray-300">
+              <img src="./images/Frame(0).svg" alt="">
+            </button>
+          </div>
+          <div class="tooltip" data-tip="add">
+            <button class="btn btn-circle cursor-pointer border border-gray-300">
+              <img src="./images/Frame (1).svg" alt="">
+            </button>
+          </div>
+          <div class="tooltip" data-tip="flag">
+            <button class="btn btn-circle cursor-pointer border border-gray-300">
+              <img src="./images/Frame (2).svg" alt="">
+            </button>
+          </div>
+
+
+
+          <button class="btn btn-active bg-[#797DFC] text-white rounded-full">Secondary</button>
         </div>
-        <div class="tooltip" data-tip="add">
-          <button class="btn btn-circle cursor-pointer border border-gray-300">
-            <img src="./images/Frame (1).svg" alt="">
-          </button>
-        </div>
-        <div class="tooltip" data-tip="flag">
-          <button class="btn btn-circle cursor-pointer border border-gray-300">
-            <img src="./images/Frame (2).svg" alt="">
-          </button>
-        </div>
-       
-        
-       
-      <button class="btn btn-active bg-[#797DFC] text-white rounded-full">Secondary</button>
-       </div>
 
       </nav>
-      </div>
-      <!-- bg-[#12132D] rounded-2xl h-[373px] -->
-      <!-- Welcome -->
-      <!-- <div class="mt-8"> -->
-        <!-- <div class="" style="background-image: url(./images/bgbanner.png);background-color:#12132D; border-radius:20px; "> -->
-          <!-- <div class="bg-contain min-h-screen  bg-no-repeat bg-[url('./images/banner.png')] lg:pt-16 border border-red-200">
+    </div>
+    <!-- bg-[#12132D] rounded-2xl h-[373px] -->
+    <!-- Welcome -->
+    <!-- <div class="mt-8"> -->
+    <!-- <div class="" style="background-image: url(./images/bgbanner.png);background-color:#12132D; border-radius:20px; "> -->
+    <!-- <div class="bg-contain min-h-screen  bg-no-repeat bg-[url('./images/banner.png')] lg:pt-16 border border-red-200">
 
       
           <div class="hero-overlay bg-opacity-60"></div>
@@ -66,41 +68,131 @@
           </div>
         </div>
       </div> -->
-    
-      <!--Let's Discuss  -->
-      <div class="mt-10">
-       <h1 class="mulish text-2xl text-center font-black">Let's Discuss</h1>
-       <p class="mulish text-lg text-center font-normal">Yes, you can run unit tests and view the results directly within the app. <br> The integrated testing features allow for a streamlined .</p>
-      </div>
-    
-      <!--Join our forum -->
-      <div>
-    
-      </div>
-    
-      <!-- Post -->
-    <div class="hidden">
-      <h1 class="mulish text-2xl text-center font-black">Latest Posts</h1>
-      <p class="mulish text-lg text-center font-normal">Yes, you can run unit tests and view the results directly within the app. <br>The integrated testing features allow for a streamlined .</p>
-    </div>
-</section>
 
-<!-- footer -->
-<div>
-  <footer class="footer footer-center p-16 bg-base-200 text-base-content rounded">
-    <div>
-      <h1 class="mulish text-2xl text-center font-black">ReTro</h1>
-      <p class="mulish text-lg text-center font-normal">Contrary to popular belief, Lorem Ipsum is not simply random text. <br> It has roots in a piece of classical Latin literature from 45 BC</p>
+    <!--Let's Discuss  -->
+    <div class="mt-10">
+      <h1 class="mulish text-2xl text-center font-black">Let's Discuss</h1>
+      <p class="mulish text-lg text-center font-normal">Yes, you can run unit tests and view the results directly within
+        the app. <br> The integrated testing features allow for a streamlined .</p>
+      <div class="mt-5">
+        <!-- card -->
+        <div class="card w-full bg-base-100 shadow-xl">
+          <div class="card-body">
+            <div class="card-actions flex gap-10 ">
+              <!-- L -->
+              <div>
+                <div class="avatar online">
+                  <div class="w-24 rounded-full">
+                    <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                  </div>
+                </div>
+              </div>
+              <!-- R -->
+              <div>
+                <div class="flex gap-5">
+                  <h1 class="mulish font-bold">#Music</h1>
+                  <p class="mulish font-bold">Author : Sakib Sarker</p>
+                </div>
+                <p class="mulish font-black text-xl mt-3">10 Kids Unaware of Their Halloween Costume</p>
+                <p class="text-lg mulish mt-3 font-semibold text-gray-500">It’s one thing to subject yourself to ha Halloween costume mishap because, <br> hey that’s your prerogative</p>
+                 <hr class="border-dashed border mt-4 mb-4">
+                 <!-- foot -->
+                 <div class="flex justify-between">
+                 <div class="flex gap-8">
+                  <div class="flex gap-3">
+                    <img src="./images/tabler-icon-message-2.svg" alt="">
+                    <p class="mt-1">560</p>
+                  </div>
+                  <div>
+                    <div class="flex gap-3">
+                      <img src="./images/tabler-icon-eye.svg" alt="">
+                      <p>1,560</p>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="flex gap-3">
+                      <img src="./images/Group 18.svg" alt="">
+                      <p>5 min</p>
+                    </div>
+                  </div>
+                 </div>
+                 <div>
+                  <div>
+                    <button class="btn btn-sm btn-circle cursor-pointer border border-green-300 w-12 ">
+                      <img class="w-4 h-4" src="./images/e.svg" alt="">
+                    </button>
+                  </div>
+                 </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
     </div>
-    <nav>
-      <img src="./images/Social.png" alt="">
-      <div class=" w-full border-red-600"></div>
-    </nav> 
-    <div class="border w-full border-gray-300"></div>
-    <aside>
-      <p>2017, All Rights Reserved.</p>
-    </aside>
-  </footer>
-</div>
+
+    <!--Join our forum -->
+    <div>
+
+    </div>
+
+    <!-- Post -->
+    <div class="mt-10">
+      <div>
+        <h1 class="mulish text-2xl text-center font-black">Latest Posts</h1>
+        <p class="mulish text-lg text-center font-normal">Yes, you can run unit tests and view the results directly
+          within the app. <br>The integrated testing features allow for a streamlined .</p>
+      </div>
+      <div class="mt-5">
+        <div class="card w-96  border border-gray-300">
+          <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" />
+          </figure>
+          <div class="card-body">
+            <div class="flex gap-2">
+              <img class=" " src="./images/bag.png" alt="">
+              <p class="text-sm mulish font-semibold text-gray-500">29 January 2024</p>
+            </div>
+            <h2 class="card-title mulish font-extrabold">What will a mars habitat force that impact in our daily life!!!
+            </h2>
+            <p>Yes, you can run unit tests and view the <br> results directly within the app. </p>
+            <div class="card-actions">
+              <div class="avatar mt-2">
+                <div class="w-10 rounded-full">
+                  <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                </div>
+              </div>
+
+              <div>
+                <h1 class="mulish font-extrabold text-lg">Cameron Williamson</h1>
+                <h1 class="text-sm mulish font-semibold text-gray-500"> ROR Developer </h1>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- footer -->
+  <div class="mt-5">
+    <footer class="footer footer-center p-16 bg-base-200 text-base-content rounded">
+      <div>
+        <h1 class="mulish text-2xl text-center font-black">ReTro</h1>
+        <p class="mulish text-lg text-center font-normal">Contrary to popular belief, Lorem Ipsum is not simply random
+          text. <br> It has roots in a piece of classical Latin literature from 45 BC</p>
+      </div>
+      <nav>
+        <img src="./images/Social.png" alt="">
+        <div class=" w-full border-red-600"></div>
+      </nav>
+      <div class="border w-full border-gray-300"></div>
+      <aside>
+        <p>2017, All Rights Reserved.</p>
+      </aside>
+    </footer>
+  </div>
 </body>
+
 </html>
