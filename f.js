@@ -1,5 +1,6 @@
 const cardContainer = document.getElementById('card-container');
 const titleAndViewR = document.getElementById('rTitleAndView');
+const PostLatest = document.getElementById('latest-post');
 
 const loadCategory = async () => {
   const res = await fetch("https://openapi.programming-hero.com/api/retro-forum/posts")
@@ -103,6 +104,49 @@ const AddToList = (title) =>{
    console.log(title);
 }
 // Latest posts load data 
+const loadLatestPosts = async () => {
+  const res = await fetch("https://openapi.programming-hero.com/api/retro-forum/latest-posts")
+  const data = await res.json();
+  // const allData = data.posts; 
+    displayPost(data);
+};
+const displayPost = item =>{
+  item.forEach(item =>{
+    const div = document.createElement("div");
+    // div.classList.add('mt-5')
+    div.innerHTML = `
+    <div class="card w-full border border-gray-300">
+          <figure><img src="${item.cover_image}" alt="Shoes" />
+          </figure>
+          <div class="card-body">
+            <div class="flex gap-2">
+              <img class=" " src="./images/bag.png" alt="">
+              <p class="text-sm mulish font-semibold text-gray-500"> ${item.author.posted_date}</p>
+            </div>
+            <h2 class="card-title mulish font-extrabold">${item.title}
+            </h2>
+            <p>${item.description}</p>
+            <div class="card-actions">
+              <div class="avatar mt-2">
+                <div class="w-10 rounded-full">
+                  <img src="${item.profile_image}" />
+                </div>
+              </div>
+
+              <div>
+                <h1 class="mulish font-extrabold text-lg">${item.author.name}</h1>
+                <h1 class="text-sm mulish font-semibold text-gray-500">${item.author.designation}</h1>
+              </div>
 
 
+            </div>
+          </div>
+        </div>
+    `;
+    PostLatest.appendChild(div)
+    console.log(item);
+  })
+console.log(item);
+}
+loadLatestPosts()
 loadCategory();
