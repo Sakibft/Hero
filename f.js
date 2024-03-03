@@ -81,9 +81,12 @@ const displayCArd = card => {
   });
 }
 // displayRightSiteOutput
+ let sum = 1;
 const AddToList = (title) =>{
+  const Asum = document.getElementById('count').innerText=sum;
+    sum = sum + 1;
   const div = document.createElement("div");
-   div.classList.add('flex', 'p-4', 'gap-y-5')
+   div.classList.add('flex', 'p-4', 'gap-10')
    div.innerHTML= `             
    <div> 
      <p class="mulish font-extrabold text-lg mt-3">10 Kids Unaware of Their <br> Halloween Costume</p>
@@ -98,10 +101,8 @@ const AddToList = (title) =>{
    `;
    titleAndViewR.appendChild(div);
    console.log(title);
-  
-  
- 
 }
+// Latest posts load data 
 
 
 loadCategory();
