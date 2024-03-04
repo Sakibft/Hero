@@ -9,7 +9,7 @@ const loadCategory = async (searchText) => {
   const allData = data.posts;
   //  console.log(data);
   displayCArd(allData)
-  // displayRightSiteOutput(allData)
+  // displayRightSite(allData)
 };
 // display card
 const displayCArd = card => {
@@ -56,7 +56,7 @@ const displayCArd = card => {
             </div>
             <div>
               <div id="viewCard" class="flex lg:gap-3">
-                <img src="./images/tabler-icon-eye.svg" alt="">
+                <img id="imggg" src="./images/tabler-icon-eye.svg" alt="">
                 <p>${
                   item.view_count
                   }</p>
@@ -64,7 +64,7 @@ const displayCArd = card => {
             </div>
             <div>
               <div class="flex lg:gap-3">
-                <img src="./images/Group 18.svg" alt="">
+                <img id="imgg" src="./images/Group 18.svg" alt="">
                 <p>${item.
                   posted_time}</p>
               </div>
@@ -72,7 +72,7 @@ const displayCArd = card => {
            </div>
            <div>
             <div>
-              <button onclick="AddToList('${item.title.replace(/'/g,'@')} , ${item.view_count}')" class="btn btn-sm btn-circle cursor-pointer border border-green-300 w-10 ">
+              <button onclick="AddToList('${item.title.replace(/'/g,'-')}',${item.view_count})" class="btn btn-sm btn-circle cursor-pointer border border-green-300 w-10 ">
                 <img class="w-4 h-4" src="./images/e.svg" alt="">
               </button>
             </div>
@@ -80,7 +80,6 @@ const displayCArd = card => {
           </div>
         </div>
       </div>
-
     </div>
   </div>
 
@@ -94,25 +93,28 @@ const displayCArd = card => {
 }
 // displayRightSiteOutput
  let sum = 1;
-const AddToList = (title) =>{
+const AddToList = (title,view) =>{
+  // console.log(title);
+  // console.log(view);
   const Asum = document.getElementById('count').innerText=sum;
     sum = sum + 1;
   const div = document.createElement("div");
-   div.classList.add('flex', 'p-4', 'gap-10')
+ 
    div.innerHTML= `             
-   <div> 
-     <p class="mulish font-extrabold text-lg mt-3">10 Kids Unaware of Their <br> Halloween Costume</p>
+   <div class="flex justify-between p-4 lg:w-96 bg-base-100 rounded-xl mt-2 ">
+   <div>
+     <p class="mulish font-extrabold text-lg mt-3">${title}</p>
    </div>
    <div>
-     <div class="flex gap-3 mt-7">
-     <img src="./images/tabler-icon-eye.svg" alt="">
-     <p>1,560</p>
+     <div class="flex gap-3 mt-3">
+       <img src="./images/tabler-icon-eye.svg" alt="">
+       <p>${view}</p>
+     </div>
    </div>
  </div>
-</div>
    `;
    titleAndViewR.appendChild(div);
-   console.log(title);
+  
 }
 // Latest posts load data 
 const loadLatestPosts = async () => {
@@ -169,7 +171,7 @@ loadCategory(searchText)
 // console.log('hi');
 }
 
-// togglelodding 
+// lodding 
 const toggleLoadingSpinner = (isLoading) =>{
   const loodingSpinner = document.getElementById('loading-spiner');
    
@@ -183,4 +185,5 @@ const toggleLoadingSpinner = (isLoading) =>{
 
  
 loadLatestPosts()
-loadCategory();
+
+handleSearch();
