@@ -18,7 +18,7 @@ const displayCArd = card => {
     
     let onlineBadge = `<div class="avatar offline">`;
      if(item.isActive){
-      onlineBadge = `<div class="avatar online">`
+      onlineBadge = `<div class="avatar online">`;
      }
     const div = document.createElement("div");
     div.classList.add("mt-10")
@@ -31,7 +31,6 @@ const displayCArd = card => {
         <div>
         ${onlineBadge}
             <div class="w-24 rounded-3xl">
-            
               <img class="rounded-3xl" src="${item.image}" />
             </div>
           </div>
@@ -89,7 +88,10 @@ const displayCArd = card => {
     console.log(item); 
   });
   // hide loading spinner
- toggleLoadingSpinner(false);
+//  toggleLoadingSpinner(false);
+setTimeout(() => {
+  toggleLoadingSpinner(false);
+}, 2000);
 }
 // displayRightSiteOutput
  let sum = 1;
@@ -145,13 +147,10 @@ const displayPost = item =>{
                   <img src="${item.profile_image}" />
                 </div>
               </div>
-
               <div>
                 <h1 class="mulish font-extrabold text-lg">${item.author.name}</h1>
                 <h1 class="text-sm mulish font-semibold text-gray-500">${item.author?.designation || 'unknown'}</h1>
               </div>
-
-
             </div>
           </div>
         </div>
