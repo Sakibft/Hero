@@ -15,7 +15,6 @@ const loadCategory = async (searchText) => {
 const displayCArd = card => {
   cardContainer.innerHTML='';
   card.forEach(item => {
-    
     let onlineBadge = `<div class="avatar offline">`;
      if(item.isActive){
       onlineBadge = `<div class="avatar online">`;
@@ -23,7 +22,6 @@ const displayCArd = card => {
     const div = document.createElement("div");
     div.classList.add("mt-10")
     div.innerHTML = `
-      
     <div id="carColorChange" class="card w-full h-80 lg:p-8 bg-base-100  bg-[#12132D0D]">
     <div class="card-body">
       <div class="card-actions flex lg:gap-10 ">
@@ -81,7 +79,6 @@ const displayCArd = card => {
       </div>
     </div>
   </div>
-
  `;
  cardContainer.appendChild(div)
  
@@ -116,7 +113,6 @@ const AddToList = (title,view) =>{
  </div>
    `;
    titleAndViewR.appendChild(div);
-  
 }
 // Latest posts load data 
 const loadLatestPosts = async () => {
@@ -169,7 +165,6 @@ console.log(searchText);
 loadCategory(searchText)
 // console.log('hi');
 }
-
 // lodding 
 const toggleLoadingSpinner = (isLoading) =>{
   const loodingSpinner = document.getElementById('loading-spiner');
@@ -181,8 +176,5 @@ const toggleLoadingSpinner = (isLoading) =>{
     loodingSpinner.classList.add('hidden')
   }
 }
-
- 
 loadLatestPosts()
-
 handleSearch();
