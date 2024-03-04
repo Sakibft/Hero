@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html data-theme="light" lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,10 +10,9 @@
   <!-- add css -->
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
   <!-- 1 -->
-  <section class="container mx-auto mt-16">
+  <section class="container mx-auto mt-8">
     <!-- navbar -->
     <div>
       <nav class="flex justify-between">
@@ -54,9 +52,9 @@
       </nav>
     </div>
     <!-- banner -->
-    <div class="mt-16">
+    <div class="mt-10">
       <div
-        class=" card w-full bg-base-100 bg-gray-800   bg-cover bg-no-repeat bg-[url('./images/bgbanner.png')] lg:py-36  ">
+        class=" card w-full bg-base-100 bg-gray-800   bg-cover bg-no-repeat bg-[url('./images/bgbanner.png')] lg:py-32  ">
         <div class="card-body ">
           <div class="card-actions ">
             <!-- c -->
@@ -118,81 +116,24 @@
       </div>
     </div>
     <!--Let's Discuss  -->
-    <div class="mt-40">
+    <div class="mt-14">
       <h1 class="mulish text-2xl text-center font-black">Let's Discuss</h1>
       <p class="mulish text-lg text-center font-normal">Yes, you can run unit tests and view the results directly within
         the app. <br> The integrated testing features allow for a streamlined .</p>
       <!-- c -->
       <div>
         <!-- loding spinar -->
-        <div id="loading-spiner" class=" flex justify-center items-center text-green-500 mt-4">
+        <div id="loading-spiner" class=" flex justify-center items-center text-green-500 mt-4 ">
           <span id="" class="loading-spiner  loading loading-ring loading-xs"></span>
           <span class="loading-spiner  loading loading-ring loading-sm"></span>
           <span class="loading-spiner  loading loading-ring loading-md"></span>
           <span class=" loading loading-ring loading-lg"></span>
 
         </div>
-
-
         <div class="mt-8">
           <div class="lg:flex justify-between ">
             <!-- card -->
-
             <div id="card-container">
-              <div class="card w-full h-80 p-10 bg-base-100  bg-[#12132D0D] hidden">
-                <div class="card-body">
-                  <div class="card-actions flex gap-10 ">
-                    <!-- L -->
-                    <div>
-                      <div class="avatar online">
-                        <div class="w-24 rounded-3xl">
-                          <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-                        </div>
-                      </div>
-                    </div>
-                    <!-- R -->
-                    <div>
-                      <div class="flex gap-5">
-                        <h1 class="mulish font-bold">#Music</h1>
-                        <p class="mulish font-bold">Author : Sakib Sarker</p>
-                      </div>
-                      <p class="mulish font-black text-xl mt-3">10 Kids Unaware of Their Halloween Costume</p>
-                      <p class="text-lg mulish mt-3 font-semibold text-gray-500">It’s one thing to subject yourself to
-                        ha Halloween costume mishap because, <br> hey that’s your prerogative</p>
-                      <hr class="border-dashed border mt-4 mb-4">
-                      <!-- foot -->
-                      <div class="flex justify-between">
-                        <div class="flex gap-8">
-                          <div class="flex gap-3">
-                            <img src="./images/tabler-icon-message-2.svg" alt="">
-                            <p class="mt-1">560</p>
-                          </div>
-                          <div>
-                            <div class="flex gap-3">
-                              <img src="./images/tabler-icon-eye.svg" alt="">
-                              <p>1,560</p>
-                            </div>
-                          </div>
-                          <div>
-                            <div class="flex gap-3">
-                              <img src="./images/Group 18.svg" alt="">
-                              <p>5 min</p>
-                            </div>
-                          </div>
-                        </div>
-                        <div>
-                          <div>
-                            <button class="btn btn-sm btn-circle cursor-pointer border border-green-300 w-10 ">
-                              <img class="w-4 h-4" src="./images/e.svg" alt="">
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
             </div>
             <!-- output card -->
             <div class=" lg:mt-10  ">
@@ -210,68 +151,14 @@
                   </div>
                   <!-- output inside card -->
                   <div id="rTitleAndView">
-                    <!-- <div class="flex justify-between p-4 lg:w-96 bg-base-100 rounded-md  ">
-                      <div>
-                        <p class="mulish font-extrabold text-normal mt-3">10 Kids Unaware of <br> Their Costume</p>
-                      </div>
-                      <div>
-                        <div class="flex gap-3 mt-7">
-                          <img src="./images/tabler-icon-eye.svg" alt="">
-                          <p>1,200</p>
-                        </div>
-                      </div>
-                    </div> -->
-                     
-                   
                   </div>
                 </div>
               </div>
-             
-            <!-- new -->
-            <div class=" lg:mt-10 hidden ">
-              <div class="card w-full bg-base-100   bg-[#12132D0D]">
-                <div class="card-body">
-                  <div class=" grid grid-cols-2 justify-between">
-                    <div>
-                      <h1 class="text-2xl mulish font-extrabold">Title</h1>
-                    </div>
-                    <div class="flex justify-between  gap-2">
-                      <img src="./images/select.svg" alt="">
-                      <p class="mulish text-lg text-gray-500 font-semibold">Mark as red ( <span  id="count"
-                        class="text-green-400">0</span> )</p>
-                    </div>
-                  </div>
-                  <!-- output inside card -->
-                  <div id="titleAndViewR" class="card lg:w-96 bg-base-100  ">
-                    <div class=" flex p-4 gap-5">
-
-                      <div>
-                        <p class="mulish font-extrabold text-lg mt-3">10 Kids Unaware of Their <br> Halloween Costume
-                        </p>
-                      </div>
-                      <div>
-                        <div class="flex gap-3 mt-7">
-                          <img src="./images/tabler-icon-eye.svg" alt="">
-                          <p>1,560</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                   
-
-
-                </div>
-              </div>
-
-            </div>
-
           </div>
         </div>
       </div>
     </div>
     </div>
-
-
     <!--Join our forum -->
     <div class="mt-10">
       <div class="card w-full bg-base-100 shadow-xl bg-[#12132D]">
@@ -288,7 +175,6 @@
         </div>
       </div>
     </div>
-
     <!-- Post -->
     <div class="mt-10">
       <div>
@@ -296,12 +182,11 @@
         <p class="mulish text-lg text-center font-normal">Yes, you can run unit tests and view the results directly
           within the app. <br>The integrated testing features allow for a streamlined .</p>
       </div>
-      <!-- c -->
+      <!-- postContainer -->
       <div id="latest-post" class="grid lg:grid-cols-3 gap-5 mt-10">
       
       </div>
   </section>
-
   <!-- footer -->
   <div class="mt-5">
     <footer class="footer footer-center p-16 bg-base-200 text-base-content rounded">
@@ -321,5 +206,4 @@
   </div>
   <script src="f.js"></script>
 </body>
-
 </html>
