@@ -2,8 +2,9 @@ const cardContainer = document.getElementById('card-container');
 const titleAndViewR = document.getElementById('rTitleAndView');
 const PostLatest = document.getElementById('latest-post');
 
-const loadCategory = async () => {
-  const res = await fetch("https://openapi.programming-hero.com/api/retro-forum/posts")
+const loadCategory = async (searchText) => {
+  const res = await fetch(`https://openapi.programming-hero.com/api/retro-forum/posts?category=${searchText}`)
+  // https://openapi.programming-hero.com/api/retro-forum/posts
   const data = await res.json();
   const allData = data.posts;
   //  console.log(data);
@@ -12,7 +13,13 @@ const loadCategory = async () => {
 };
 // display card
 const displayCArd = card => {
+  cardContainer.innerHTML='';
   card.forEach(item => {
+    
+    let onlineBadge = `<div class="avatar offline">`;
+     if(item.isActive){
+      onlineBadge = `<div class="avatar online">`
+     }
     const div = document.createElement("div");
     div.classList.add("mt-10")
     div.innerHTML = `
@@ -22,9 +29,10 @@ const displayCArd = card => {
       <div class="card-actions flex lg:gap-10 ">
         <!-- L -->
         <div>
-          <div class="avatar online">
+        ${onlineBadge}
             <div class="w-24 rounded-3xl">
-              <img src="${item.image}" />
+            
+              <img class="rounded-3xl" src="${item.image}" />
             </div>
           </div>
         </div>
@@ -78,8 +86,11 @@ const displayCArd = card => {
 
  `;
  cardContainer.appendChild(div)
-    // console.log(item); 
+ 
+    console.log(item); 
   });
+  // hide loading spinner
+ toggleLoadingSpinner(false);
 }
 // displayRightSiteOutput
  let sum = 1;
@@ -121,7 +132,7 @@ const displayPost = item =>{
           <div class="card-body">
             <div class="flex gap-2">
               <img class=" " src="./images/bag.png" alt="">
-              <p class="text-sm mulish font-semibold text-gray-500"> ${item.author.posted_date}</p>
+              <p class="text-sm mulish font-semibold text-gray-500"> ${item.author?.posted_date || 'No Publish Date'}</p>
             </div>
             <h2 class="card-title mulish font-extrabold">${item.title}
             </h2>
@@ -135,7 +146,7 @@ const displayPost = item =>{
 
               <div>
                 <h1 class="mulish font-extrabold text-lg">${item.author.name}</h1>
-                <h1 class="text-sm mulish font-semibold text-gray-500">${item.author.designation}</h1>
+                <h1 class="text-sm mulish font-semibold text-gray-500">${item.author?.designation || 'unknown'}</h1>
               </div>
 
 
@@ -144,9 +155,32 @@ const displayPost = item =>{
         </div>
     `;
     PostLatest.appendChild(div)
-    console.log(item);
+    // console.log(item);
   })
-console.log(item);
+// console.log(item);
 }
+// handle search button 
+const handleSearch = () => {
+  toggleLoadingSpinner(true)
+const searChField = document.getElementById('searchText');
+const searchText = searChField.value;
+console.log(searchText);
+loadCategory(searchText)
+// console.log('hi');
+}
+
+// togglelodding 
+const toggleLoadingSpinner = (isLoading) =>{
+  const loodingSpinner = document.getElementById('loading-spiner');
+   
+  if(isLoading){
+    loodingSpinner.classList.remove('hidden')
+  }
+  else{
+    loodingSpinner.classList.add('hidden')
+  }
+}
+
+ 
 loadLatestPosts()
 loadCategory();
